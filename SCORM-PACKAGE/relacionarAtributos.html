@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+        <title>atributosTexto</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src=""></script>
+    </head>
+    <body>
+    <div class = "wrapperRelations">
+        <div class = "columna-botones">
+            <div class = "celda">
+                    <header class="titulo">Process</header>
+                    <div id="botones_p" class="botones_p"></div></div>
+            <div class = "celda">
+                <header class="titulo">Entities</header>
+                <div id="botones_e" class="botones_e"></div>
+            </div>
+            <div class = "celda">
+                <header class="titulo">Flows</header>
+                <div id="botones_f" class="botones_f"></div>
+            </div>
+            <div class = "celda">
+                <header class="titulo">Depots</header>
+                <div id="botones_a" class="botones_a"></div>
+            </div>
+            <div id="prev_pagina">
+                <input type="button" id="relacionar" class="relacionar" value="previews page" onclick= "boton('anterior');" style='width: 350px; height:40px; margin:5px;' >
+            </div>
+        </div>
+        <div class="columna-botones" >
+            <div style="margin: auto;">Select the arguments of the relation,<br> by clicking on them at the left table</div>
+            <br>
+            <table id="tabla" style="margin: auto;">
+              <thead>
+                <tr>
+                  <th>Element</th>
+                  <th>Flow</th>
+                  <th>Element</th>
+                </tr>
+              </thead>
+              <tbody id="secondRow">
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <div id="clearRel">
+              <input type="button" id="clear" class="relacionar" value="Clear table" onclick= "clearRel();" style='width: 125px; height:40px;' >
+            </div>
+            <br>
+            <div style="margin: auto;">You may delete a relation by clicking on it <br> in the box at the right side</div>
+          </div>
+        <div class="columna-botones">
+        <center>
+            <div class = "relaciones">
+                <header class="tituloR">Relations</header>
+                <div id="botones_r" class="botones_r"></div>
+            </div>
+            <div id="next_pagina">
+                <input type="button" id="relacionar" class="relacionar" value="next page" onclick= "boton('siguiente');" style='width: 325px; height:40px;' >
+            </div>
+        </center>
+        </div>     
+    </div>        
+    </body>
+    <script type="text/javascript" src="js/relacionar.js"></script>
+</html>
